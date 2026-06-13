@@ -1,25 +1,29 @@
 ## Expense Tracker
-A mobile app that connects to your bank via Plaid, tracks spending habits automatically, and gives you real time analytics.
+A passive expense tracking app for people who hate budgeting. Connect your bank, pay as normal, and get real-time insights into your spending habits that utilizes budgeting tools and reminders to help you change them.
 
 
 ## SET UP
-1. Create Directory Layout
-    -Mkdir main project folder
-    -Mkdir frontend, backend, etc
+**1. Create Directory Layout**
+   
+       -Mkdir main project folder
+       -Mkdir frontend, backend, etc
 
-2. Create Virtual Environment
-    -Run: python3 -m venv venv
-    -Run activate script
-        -Windows: venv\Scripts\activate
-        -Mac/Linux: source venv/bin/activate
+**3. Create Virtual Environment**
 
-3. Record project dependencies
-    (if setting up for the first time)
-    -Install all needed packages
-    -Run: pip freeze > requirements.txt
+        -Run: python3 -m venv venv
+        -Run activate script
+            -Windows: venv\Scripts\activate
+            -Mac/Linux: source venv/bin/activate
 
-    (if setting up from existing version)
-    -Run: pip install -r requirements.txt
+**5. Record project dependencies**
+   
+        (if setting up for the first time)
+        -Install all needed packages
+        -Run: pip freeze > requirements.txt
 
-4. Start uvicorn
-    -Run: uvicorn main:app --reload
+        (if setting up from existing version)
+        -Run: pip install -r requirements.txt
+
+**6. Start uvicorn**
+
+       -Run: uvicorn main:app --reload
