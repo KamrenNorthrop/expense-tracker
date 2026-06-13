@@ -3,7 +3,7 @@ A mobile app that connects to your bank via Plaid, tracks spending automatically
 
 
 ## SET UP
-1. Create Directory Layout
+**1. Create Directory Layout**
    
        -Mkdir main project folder
        -Mkdir frontend, backend, etc
