@@ -1,0 +1,12 @@
+## Ignore the virtual environment
+venv/
+.venv/
+env/
+
+## Ignore compiled files
+__pycache__/
+
+## Ignore editor environment files
+.vscode/
+.idea/
+.env
