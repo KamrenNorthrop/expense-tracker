@@ -1,5 +1,5 @@
 ## Expense Tracker
-A mobile app that connects to your bank via Plaid, tracks spending automatically, and gives you real time analytics.
+A passive expense tracking app for people who hate budgeting. Connect your bank, pay as normal, and get real-time insights into your spending habits that utilizes budgeting tools and reminders to help you change them.
 
 
 ## SET UP
