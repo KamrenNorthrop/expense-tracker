@@ -3,14 +3,17 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 from enum import Enum
 from uuid import uuid4
+from database import supabase
 
 app = FastAPI()
 
+## Enum class for transaction type - there will always be a type
 class TransactionTypeEnum(str, Enum):
     credit = 'credit'
     debit = 'debit'
     cash = 'cash'
 
+## Pydantic model for transactions
 class TransactionInput(BaseModel):
     user_id: str
     merchant: str
@@ -21,18 +24,20 @@ class TransactionInput(BaseModel):
     transaction_description: str | None = None
     source: str
 
+## Create a unique id using uuid4
 class Transaction(TransactionInput):
       transaction_id: str = Field(default_factory=lambda: str(uuid4()))
 
-
+## GET
 @app.get("/transactions")
 def get_transactions():
-    return [
-        {"merchant": "Dominos", "amount": 7.99},
-        {"merchant": "Loyal Legion", "amount": 30.00}
-    ]
+    transaction_query = supabase.table("transactions").select("*").execute()
+    return transaction_query.data
 
+## POST
 @app.post("/transactions")
 def post_transaction(transaction_info: TransactionInput):
     transaction_info = Transaction(**transaction_info.model_dump())
-    return transaction_info
+    data = transaction_info.model_dump(mode='json')
+    supabase.table("transactions").insert(data).execute()
+    return data
