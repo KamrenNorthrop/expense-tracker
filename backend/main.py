@@ -37,6 +37,9 @@ def get_transactions():
 ## POST
 @app.post("/transactions")
 def post_transaction(transaction_info: TransactionInput):
+    #Create object that includes transaction_id
+    #use that object and model dump it, mode = json
+    #insert into database, return dictionary
     transaction_info = Transaction(**transaction_info.model_dump())
     data = transaction_info.model_dump(mode='json')
     supabase.table("transactions").insert(data).execute()
