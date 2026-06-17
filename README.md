@@ -33,23 +33,23 @@ A passive expense tracking app for people who hate budgeting. Connect your bank,
         - Analytics endpoints
         - IOS mobile app (React Native / Expo)
 
-## SET UP
-**1. To Clone
+### SET UP
+## **1. To Clone**
         - Run: git clone https://github.com/KamrenNorthrop/expense-tracker.git
         - Run: cd expense-tracker/backend
 
-**2. Create Virtual Environment**
+## **2. Create Virtual Environment**
         - Run: python3 -m venv venv
         - Run activate script
             - Windows: venv\Scripts\activate
             - Mac/Linux: source venv/bin/activate
 
-**3. Install Project Dependencies**
+## **3. Install Project Dependencies**
         - Run: pip install -r requirements.txt
 
-**4. Create .env File In /backend With The Following:**
+## **4. Create .env File In /backend With The Following:**
         - Variable: SUPABASE_URL=your_supabase_project_url
         - Variable: SUPABASE_API_KEY=your_supabase_anon_key
 
-**5. Start uvicorn**
+## **5. Start uvicorn**
        -Run: uvicorn main:app --reload
