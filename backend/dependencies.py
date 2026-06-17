@@ -3,6 +3,7 @@ from database import supabase
 
 def verify_token(authorization: str = Header(...)):
     try:
+        #separate header from token
         token = authorization.split(" ")[1]
         auth = supabase.auth.get_user(token)
 
