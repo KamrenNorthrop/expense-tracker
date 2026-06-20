@@ -6,9 +6,11 @@ from uuid import uuid4
 from database import supabase
 from auth import router as auth_router
 from dependencies import verify_token
+from plaid_routes import plaid_router
 
 app = FastAPI()
 app.include_router(auth_router)
+app.include_router(plaid_router)
 
 ## Enum class for transaction type - there will always be a type
 class TransactionTypeEnum(str, Enum):
