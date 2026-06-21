@@ -107,9 +107,4 @@ def get_transactions(current_user=Depends(verify_token)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-    return len(transactions) > 0 
-    
-
-    
-
-
+    return len(transactions) > 0
