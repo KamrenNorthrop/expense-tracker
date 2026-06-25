@@ -12,7 +12,7 @@ from plaid.model.transactions_get_request import TransactionsGetRequest
 from plaid.model.transactions_get_request_options import TransactionsGetRequestOptions
 from database import supabase
 from uuid import uuid4
-from datetime import datetime, date
+from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
 plaid_router = APIRouter(prefix='/plaid', tags=['Plaid'])

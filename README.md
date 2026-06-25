@@ -6,8 +6,10 @@ A passive expense tracking app for people who hate budgeting. Connect your bank,
         Back-end: FastAPI (API framework), Uvicorn (Server)
         Database: PostgreSQL via Supabase
         Auth: Supabase Auth (JWT based)
+        Linter: Ruff
+        Static type checker: mypy
 
-## Folder Hierarchy (Relative to what has been completed currently)
+## Folder Hierarchy
 
         -expense-tracker
                 -backend
@@ -15,6 +17,9 @@ A passive expense tracking app for people who hate budgeting. Connect your bank,
                         -auth.py                # Registration and login endpoints
                         -database.py            # Connection to Supabase PostgreSQL database
                         -dependencies.py        # JWT token verification
+                        -plaid_routes.py        # Plaid bank connection and transaction sync endpoints
+                        -plaid_services.py      # Plaid API client configuration
+                        -analytics_routes.py    # Spending analytics and insights endpoints
                         -requirements.txt       # Python dependencies for this project
                         -.env                   # Secret keys (Not commited)
                 -.gitignore

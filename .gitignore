@@ -3,8 +3,10 @@ venv/
 .venv/
 env/
 
-## Ignore compiled files
+## Ignore compiled files and caches
 __pycache__/
+.mypy_cache/
+.ruff_cache/
 
 ## Ignore editor environment files
 .vscode/
